@@ -58,7 +58,7 @@ False
 True
 """
 
-# Answer: False
+# Answer: True
 
 """
 Question 6
