@@ -7,17 +7,14 @@ you are testing below enter mbox-short.txt as the file name.
 
 
 # Use the file name mbox-short.txt as the file name
-fname = input("Enter file name: ")
-fh = open(fname)
-sum = 0.0
 count = 0
-
+big = 0
+big = float(big)
+fname = input("ENTER FILE NAME :")
+fh = open(fname)
 for line in fh:
-        if not line.startswith("X-DSPAM-Confidence:") :
-                continue
-        else:
-                sum = sum + float(line[20:])
-                count = count + 1
-
-print("Average spam confidence:", sum/count)
-
+    if line.startswith("X-DSPAM-Confidence:") :
+        a=float(line[20:26])
+        big = big+a
+        count = count + 1
+print('Average spam confidence:',big/count)
