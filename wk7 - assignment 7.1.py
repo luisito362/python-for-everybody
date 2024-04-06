@@ -2,11 +2,8 @@
 You can download the sample data at http://www.pythonlearn.com/code/words.txt
 
 # Use words.txt as the file name
-fname = raw_input("Enter file name: ")
+# Use words.txt as the file name
+fname = input("Enter file data: ")
 fh = open(fname)
-
-for line in fh:
-        line = line.rstrip()
-line = line.upper()
-print(line)
-
+for line in fh.readlines():
+    print (line.upper().strip())
